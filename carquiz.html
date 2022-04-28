@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Are you a car mechanic?</title>
+<link href="bootstrap.min.css" rel="stylesheet" media="screen">
+<style>
+
+
+
+body {
+background-image: url("engine.jpg");
+}
+
+#main { 
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  padding: 10px;
+  background-color: #9ca0a6;
+  border-radius: 10px;
+ }
+
+#header {
+margin-top
+border: 2px solid black;
+height: 150px;
+background: whitesmoke;
+color: white;
+}
+
+label {
+display: block;
+background:#565157;
+color: white;
+ 
+}
+
+label:hover {
+  background: whitesmoke;
+  color: black;
+  
+}
+
+input { 
+size: 30%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 100px;
+  
+}
+
+button {
+width: 100px;
+margin-top: 10px;
+margin-left: auto;
+margin-right: auto;
+display: block;
+background: #19191a;
+color: whitesmoke;
+font-family: arial;
+}
+
+button:hover {
+background: whitesmoke;
+color: black;
+font-family: arial;
+}
+
+h5 {
+  font-size: 18px;
+  color: black;
+  font-family: timesnewroman;
+}
+
+.blacky {
+  border: 2px black;
+  width: 30%;
+  height: 300px;
+  margin-top: 20px;
+  background: #F5EFB1;
+} 
+
+.col-3 { 
+width: 80%;
+max-width: 1000px;
+margin: auto;
+margin-bottom: 25px;
+margin-top: 25px;
+padding: 10px;
+background-color: #9ca0a6;
+border-radius: 10px;
+display: block; 
+
+} 
+
+
+p{
+  color: black; 
+}
+
+img{ 
+width: 15%;
+height: auto; 
+padding: center;
+margin-top: center;
+margin-bottom: center;
+
+ 
+ }
+
+</style>
+
+
+
+
+</head>
+
+<body>
+  <div id="main">
+ <div class="container"> 
+<div class="row">
+   <div class="col-md-9">
+<font size="+5"><center><b>Car Maintance Quiz!</b></center></font>
+</div> 
+</div>
+</div> 
+</div>
+
+
+<div id="main">
+ <div class="container"> 
+<div class="row">
+   <div class="col-md-3">
+
+
+
+
+<center><b>Ready To Test Your Car Maintance Kownledge?</b></center>
+<center><b>DISCLAIMER!</b></center>
+<p><b>This is just for education purposes only. You should visit a trusted mechanic and consult your owners manual for complete and accurate car maintance recommendations. All information here is general for most makes and models. This quiz is here to test your general knowledge based on general maintance needs, driving useage, and typical car ownership types. Enjoy!</b></p> 
+
+<form  id="form2"  onsubmit="welcome(); return false"> 
+<p id="yourname">Please provide your first and last name below:</p>
+<p>First Name: <input type="text" id="firstname" placeholder="First Name" name="name" required /></p> 
+<span class="validity"></span>
+<p>Last Name: <input type="text" id="lastname" placeholder="Last Name" name="name" required /></p> 
+<span class="validity"></span>
+<input type="submit" value="Submit"> <input type="reset" value="Reset">
+</form>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="main">
+ <div class="container"> 
+<div class="row">
+   <div class="col-md-3">
+
+<form id="form1">
+
+
+
+
+
+
+<h5>Question 1: How often should you change your car oil in a modern car?</h5>
+<img src="oil.jpg">
+<label for="var_string"><input type="radio" name="vita" value="0" id="var_string" />Never</label>
+<label for="var_join"><input type="radio" name="vita" value="20" id="var_join" />Every 5,000-7,500 miles</label>
+<label for="var_info"><input type="radio" name="vita" value="0" id="var_info" />Every 10,000-15,000 miles </label>
+<label for="var_condition"><input type="radio" name="vita" value="0" id="var_condition"/>Every 3,000-5,000 miles</label> 
+
+
+<h5>Question 2: On avergae, How long does a set of new tires last?
+</h5><img src="tire.jpg">
+<label for="sub_string"><input type="radio" name="sub" value="0" id="sub_string"/>Forever</label>
+<label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>30,000-50,000 miles</label>
+<label for="sub_info"><input type="radio" name="sub" value="0" id="sub_info" />80,000-100,000 miles</label>
+<label for="sub_condition"><input type="radio" name="sub" value="20" id="sub_condition" />50,000-80,000 miles</label>
+
+
+<h5>Question 3: On average, How long does a new set of brake pads last before needing to be replaced?
+</h5><img src="brake.jpg">
+<label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />10,000-40,000 miles</label>
+<label for="cat_join"><input type="radio" name="con" value="0" id="cat_join" />Forever/Lifespan of the Vehicle</label>
+<label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />75,000-100,000 miles</label>
+<label for="cat_condition"><input type="radio" name="con" value="20" id="cat_condition" />35,000-60,000 miles</label>
+
+
+<h5>Question 4: How often should you get your tires rotated to maintain optimum tire health, even tire wear, and prolong tire life?
+</h5> <img src="rotation.jpg">
+<label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />Never</label>
+<label for="if_join"><input type="radio" name="ifstate" value="0" id="if_join" />Everytime you get new tires</label>
+<label for="if_info"><input type="radio" name="ifstate" value="20" id="if_info" />Every 7,500 miles</label>
+<label for="if_condition"><input type="radio" name="ifstate"  value="0" id="if_condition" />Every 15,000 miles</label>
+
+
+<h5>Question 5: Based on typical driving usage, How many years/milage should the average car battery last?
+</h5><img src="battery.jpg">
+<label for="if_string"><input type="radio" name="seed" value="0" id="if_string" />The lifetime of the Vehicle</label>
+<label for="if_join"><input type="radio" name="seed" value="0" id="if_join" />7-10 years/100,000 miles</label>
+<label for="if_info"><input type="radio" name="seed" value="20" id="if_info" />3-5 years/50,000 miles</label>
+<label for="if_condition"><input type="radio" name="seed"  value="0" id="if_condition" />2-3 years/35,000 miles</label>
+
+
+
+
+
+
+
+
+
+
+<center><button type="submit">Submit</button></center><button type="reset">Reset</button></center>
+
+  </form>
+
+<b><center><p>You scored a: <span id="grade">___</span></p></center></b>
+<p id="grade2"></p>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+<script>
+document.getElementById("form1").onsubmit=function() {
+       vita = parseInt(document.querySelector('input[name = "vita"]:checked').value);
+	   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+	   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+	   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+    seed = parseInt(document.querySelector('input[name = "seed"]:checked').value);
+
+
+	   result = vita + sub + con + ifstate + seed ;
+
+	document.getElementById("grade").innerHTML = result ;
+
+  if (result == 0) {result2 = "You need to see a mechanic, now!"}; 
+  if (result == 20) {result2 = "Did you even read your car's owners manual?"};
+  if (result == 40) {result2 = "You're still forgetting alot of stuff."};
+  if (result == 60) {result2 = "Keep trying, you're not quite there yet!"};
+  if (result == 80) {result2 = "Almost there, remember everything that needs to be regularly done"};
+  if (result == 100) {result2 = "Great job! You're a car mainatance expert!"};
+document.getElementById("grade2").innerHTML = result2;   
+
+
+
+
+return false; 
+
+} 
+
+
+
+
+
+</script> 
+
+
+
+
+
+
+</body>
+
+
+
+</html>
+
+<script>
+
+
+
+
+function welcome() {
+
+    var firstName = document.getElementById("firstname").value;
+    var lastName = document.getElementById("lastname").value;
+    var yourName = firstName + " " + lastName;
+    document.getElementById("yourname").innerHTML = "Hi " + yourName + ". Welcome to the site, I hope you studied :)";
+     document.getElementById("yourname");
+
+    // use the return false above in form html
+    return false; // required to not refresh the page
+
+  }
+  
+ document.getElementById("form2").onsubmit= welcome;
+</script>
